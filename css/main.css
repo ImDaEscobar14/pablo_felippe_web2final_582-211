@@ -13,6 +13,13 @@
     src: url(/assets/polices/BankGothic\ Bold.ttf) format(opentype);
 
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+} 
 
 :root {
   --red : #E20A16; 
@@ -27,17 +34,20 @@
 ----------------------------------------------------------*/ 
 
 ul {
+    margin:0;
+    padding:0;
     display: flex;
     width: 100vw;
-    height: 250px;
+   /* height: 250px;*/
     min-width: 393px;
-    min-height: 250px;
+    min-height: 150px;
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
-    font-family: 'BankGothic', sans-serif;
+    font-family: 'bank_gothic_bold', sans-serif;
     background-color: black;    
   }
+  
   
   ul, li {
     font-size: 25px;
@@ -54,17 +64,28 @@ ul {
     color: #4D4D4D;
   }
 
+
+  
+
   img {
-    height: 250px;
+    width: 100%;
+    max-width:750px;
+    min-width: 200px;
+    /*height: 250px;*/
   }
 
 
   footer {
+    border:2px solid red;
     display: flex;
-    width: 1920px;
+
     align-items: flex-start;
     align-self: stretch;
     flex-wrap: wrap;
+  }
+
+  .liste {
+    width: 100vh;
   }
 
 
