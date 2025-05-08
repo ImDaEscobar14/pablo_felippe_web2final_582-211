@@ -1,0 +1,30 @@
+@font-face {
+    font-family: bank_gothic_light;
+    src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format(opentype);
+
+    font-family: bank_gothic_medium;
+    src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format(opentype);
+
+    font-family: bank_gothic_bold;
+    src: url(/assets/polices/BankGothic\ Bold.ttf) format(opentype);
+
+}
+
+ul {
+    display: flex;
+    width: 1440px;
+    height: 250px;
+    min-width: 393px;
+    min-height: 250px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: 'BankGothic', sans-serif;
+    background-image: url('./assets/images/square_enix_logo.png');
+    background-color: black;
+  }
+  
+  ul, li {
+    font-size: 25px;
+    color: white;
+  }
