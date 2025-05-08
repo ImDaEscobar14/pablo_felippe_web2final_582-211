@@ -59,7 +59,13 @@ ul {
   }
 
 
-
+  footer {
+    display: flex;
+    width: 1920px;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
 
 
 
