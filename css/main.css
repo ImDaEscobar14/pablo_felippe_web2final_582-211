@@ -55,15 +55,29 @@ ul {
     list-style: none;
   }
 
+  header li {
+    display: flex;
+    width: 20vw;
+    max-width: 200px;
+    min-width: 150px;
+    aspect-ratio: 2/1;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+
   ul, li, a {
     text-decoration: none;
     color: white;
   }
 
-  a:hover{
-    color: #4D4D4D;
+  li:hover {
+    background-color: var(--grisfonce);
   }
 
+li:hover:nth-child(3) {
+  background-color: black;
+}
 
   
 
