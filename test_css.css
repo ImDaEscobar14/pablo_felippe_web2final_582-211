@@ -46,6 +46,7 @@ header {
     flex-direction: column;
 }
 
+
 /*.nav {
     display: flex;
     flex-direction: column;
@@ -87,11 +88,21 @@ header {
 }
 
 .nav {
-    display: none; /* caché par défaut (mobile) */
     order: 3; /* dernier */
     list-style: none;
     padding: 0;
     margin-left: auto; /* pousse le menu complètement à droite */
+}
+
+.logo-li {
+  display: block;
+}
+
+.nav-gauche {
+  display: none;
+}
+.nav-droite {
+  display: none;
 }
 
 
@@ -227,12 +238,20 @@ header {
   display: inline-block;
 }
 
+.nav-gauche {
+  display: flex;
+}
+
 .logo-li {
   order: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.nav-droite {
+  display: flex;
 }
 
 .logo-header {
