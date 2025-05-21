@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'bank_gothic_light';
+    src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format('opentype');
+  }
+  @font-face {
+    font-family: 'bank_gothic_medium';
+    src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format('opentype');
+  }
+  @font-face {
+    font-family: 'bank_gothic_bold';
+    src: url(/assets/polices/BankGothic\ Bold.ttf) format('opentype');
+  }
+
+.rechercherjeux {
+    display: flex;
+    justify-content: center;
+    font-family: 'bank_gothic_light', sans-serif;
+}
+
+.barre-de-recherche {
+    display: flex;
+    justify-content: center;
+}
+
+.rechercherconsole {
+    display: flex;
+    justify-content: center;
+    font-family: 'bank_gothic_light', sans-serif;
+    margin-top: 30px;
+}
+
+.jeux_container {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100vw;
+    justify-content: center;
+}
+
+.platforme {
+    border: 5px solid black;
+    margin: 10px;
+    height: 80px;
+    width: 150px;
+}
