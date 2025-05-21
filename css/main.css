@@ -113,6 +113,11 @@ header {
 }
 
 
+/*MAIN*/
+main {
+  background-color: #3C3C3C;
+}
+
 footer {
   background-color: black;
   color: white;
