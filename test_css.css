@@ -4,87 +4,93 @@
 
 /* Polices personnalisées */
 @font-face {
-    font-family: 'bank_gothic_light';
-    src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format('opentype');
+  font-family: 'bank_gothic_light';
+  src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format('opentype');
 }
 @font-face {
-    font-family: 'bank_gothic_medium';
-    src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format('opentype');
+  font-family: 'bank_gothic_medium';
+  src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format('opentype');
 }
 @font-face {
-    font-family: 'bank_gothic_bold';
-    src: url(/assets/polices/BankGothic\ Bold.ttf) format('opentype');
+  font-family: 'bank_gothic_bold';
+  src: url(/assets/polices/BankGothic\ Bold.ttf) format('opentype');
 }
 
 /* Variables pour les couleurs*/
 :root {
-    --red: #E20A16; 
-    --grisfonce: #4D4D4D;
-    --grispale: #C8C8C8;
+  --red: #E20A16; 
+  --grisfonce: #4D4D4D;
+  --grispale: #C8C8C8;
 }
 
 /* Global */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* C'est la couleur de fond de notre page */ 
 body {
-    background-color: black;
-    color: white;
-    font-family: 'bank_gothic_medium', sans-serif;
+  background-color: black;
+  color: white;
+  font-family: 'bank_gothic_medium', sans-serif;
 }
 
 header {
-    background-color: black;
-    width: 100vw;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: black;
+  width: 100vw;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 
 /*.nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
 }*/
 
+/* C'est tout ce que l'on retrouve dans ma nav*/
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centre horizontalement tous les éléments */
-    gap: 20px; /* espace entre logo et hamburger */
-    padding: 0 20px;
-    width: 100%;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 20px; /* espace entre logo et hamburger */
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
 }
 
 .logo-header {
-    height: 60px;
-    order: 1; /* premier élément */
+  height: 60px;
+  order: 1; /* premier élément */
+}
+
+.logo-header {
+  width: 200px;
 }
 
 .menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    order: 2; /* deuxième élément */
-    z-index: 3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  order: 2; /* deuxième élément */
+  z-index: 3;
 }
 
 .menu-toggle .bar {
-    width: 40px;
-    height: 10px;
-    background-color: white;
-    border-radius: 10px;
-    display: block;
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: block;
 }
 
 .nav {
@@ -107,66 +113,66 @@ header {
 
 
 footer {
-    background-color: black;
-    color: white;
-    width: 100vw;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    font-family: 'bank_gothic_medium', sans-serif;
-    flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'bank_gothic_medium', sans-serif;
+  flex-direction: column;
 }
 
 .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-links {
-    list-style: none;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'bank_gothic_medium', sans-serif;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'bank_gothic_medium', sans-serif;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 
 }
 
 .footer-logo {
-    height: 50px;
-    display: block;
-    margin: 0 auto;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
 }
 
 .liste {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .liste ul {
-    list-style: none;
-    font-size: 16px;
-    text-align: center;
+  list-style: none;
+  font-size: 16px;
+  text-align: center;
 }
 
 
@@ -187,55 +193,58 @@ en premier (mobile first).
 
 @media (min-width: 750px) {
 body {
-    margin: 0;
-    background-color: #111;
-    color: white;
-    font-family: 'bank_gothic_medium', sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: 'bank_gothic_medium', sans-serif;
 }
 
 /*---------------------------------------------------------- 
 # SECTION : En-tête (nav, log etc)
 ----------------------------------------------------------*/ 
 header {
-    background-color: black;
-    width: 100vw;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: black;
+  width: 100vw;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  position: relative;
-  flex-wrap: wrap;
-  z-index: 2;
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 0;
+margin: 0 auto;
+position: relative;
+flex-wrap: wrap;
+z-index: 2;
 }
 
 .nav li {
-  font-family: 'bank_gothic_bold', sans-serif;
-  font-size: 18px;
+font-family: 'bank_gothic_bold', sans-serif;
+font-size: 18px;
 }
 
 .nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  display: inline-block;
+text-decoration: none;
+color: white;
+padding: 10px;
+display: inline-block;
+}
+
+.nav-gauche {
+display: flex;
 }
 
 .nav-gauche {
@@ -243,11 +252,15 @@ header {
 }
 
 .logo-li {
-  order: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+order: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.nav-droite {
+display: flex;
 }
 
 .nav-droite {
@@ -255,77 +268,90 @@ header {
 }
 
 .logo-header {
-  height: 60px;
-  max-width: 100px;
-  object-fit: contain;
+height: 60px;
+max-width: 800px;
+object-fit: contain;
 }
 
 .nav li:hover {
-    background-color: var(--grisfonce);
-    border-radius: 4px;
+  background-color: var(--grisfonce);
+  border-radius: 4px;
 }
 
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
 /*---------------------------------------------------------- 
 # SECTION : Footer 
 ----------------------------------------------------------*/ 
- footer {
-    background-color: black;
-    color: white;
-    width: 100vw;
-    padding: 40px 60px;
-    display: flex;
-    justify-content: center;
-  }
+footer {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+}
 
-  .footer-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-  }
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
 
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
 
-  .footer-links {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 40px;
-    font-family: 'bank_gothic_medium', sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.footer-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px 40px;
+  font-family: 'bank_gothic_medium', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex-direction: row;
+}
 
-  .footer-links li {
-    color: white;
-  }
+.footer-links li {
+  color: white;
+}
 
-  .social-icons {
-    display: flex;
-    gap: 12px;
-  }
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
 
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-  }
+.youtube {
+  position: relative;
+  top: 3px;
+}
 
-  .footer-right {
-    display: flex;
-    align-items: center;
-  }
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
 
-  .footer-logo {
-    height: 50px;
-  }
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-container {
+  position: relative;
+  top: 12px;
+  display: flex;
+  height: 50px;
+  align-self: flex-end;
+}
 }
