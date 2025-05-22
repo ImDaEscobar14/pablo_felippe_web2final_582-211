@@ -1,25 +1,52 @@
 @font-face {
-    font-family: 'bank_gothic_light';
-    src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format('opentype');
-  }
-  @font-face {
-    font-family: 'bank_gothic_medium';
-    src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format('opentype');
-  }
-  @font-face {
-    font-family: 'bank_gothic_bold';
-    src: url(/assets/polices/BankGothic\ Bold.ttf) format('opentype');
-  }
+    font-family: 'poppins_light';
+    src: url(/assets/polices/Poppins-Light.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'poppins_medium';
+    src: url(/assets/polices/Poppins-Medium.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'poppins_bold';
+    src: url(/assets/polices/Poppins-Regular.ttf) format('opentype');
+}
 
+/*DÉBUT PAGE ASSISTANCE MOBILE*/
 .rechercherjeux {
     display: flex;
     justify-content: center;
     font-family: 'bank_gothic_light', sans-serif;
 }
 
+#loupe {
+    height: 35px;
+}
+
 .barre-de-recherche {
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 5px;
+}
+
+#rechercher::placeholder {
+    color: black;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+#rechercher {
+    height: 48px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid black;
+    font-size: large;
+    padding-left: 5px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid black;
 }
 
 .rechercherconsole {
@@ -31,15 +58,258 @@
 
 .jeux_container {
     display: flex;
-    flex-direction: row;
-    height: 100px;
-    width: 100vw;
-    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
 }
 
 .platforme {
+    display: flex;
+    align-self: center;
     border: 5px solid black;
     margin: 10px;
-    height: 80px;
-    width: 150px;
+    height: 10vh;
+    width: 20vh;
+    object-fit: contain;
 }
+
+.plus_container {
+    display: flex;
+    justify-content: center;
+}
+
+.plus {
+    border: 5px solid black;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rechercherfranchise {
+    display: flex;
+    justify-content: center;
+    font-family: 'bank_gothic_light', sans-serif;
+    margin-top: 30px;
+}
+
+.franchise {
+    display: flex;
+    align-self: center;
+    border: 5px solid black;
+    margin: 10px;
+    height: 10vh;
+    width: 20vh;
+    object-fit: cover;
+}
+/*FIN PAGE ASSISTANT MOBILE*/
+
+/*DÉBUT PAGE JEUX MOBILE*/
+.textDebut_container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.textDebut {
+    width: 50vw;
+    text-align: center;
+    border: 5px solid black;
+    padding: 20px;
+    font-family: "poppins_light";
+    margin-top: 5px;
+}
+
+.shrek_container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.shrek {
+    height: 15vh;
+    width: 50vw;
+    border: 5px solid black;
+}
+
+.textFin {
+    width: 50vw;
+    text-align: center;
+    border: 5px solid black;
+    padding: 20px;
+    font-family: "poppins_light";
+    margin-bottom: 5px;
+}
+
+.textBANL {
+    width: 50vw;
+    text-align: center;
+    border: 5px solid black;
+    padding: 20px;
+    font-family: "poppins_light";
+}
+
+.BA_NL {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+/*FIN PAGE JEUX MOBILE*/
+
+@media (min-width: 750px) {
+
+    /*DÉBUT PAGE ASSISTANT DESKTOP*/
+    .rechercherjeux {
+        display: flex;
+        justify-content: center;
+        font-family: 'bank_gothic_light', sans-serif;
+    }
+
+    .barre-de-recherche {
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    #rechercher::placeholder {
+        color: black;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding-left: 5px;
+    }
+
+    #rechercher {
+        height: 48px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        border: 5px solid black;
+        font-size: large;
+        padding-left: 5px;
+    }
+
+    button {
+        background-color: rgba(255, 255, 255, 0);
+        border: 5px solid black;
+    }
+
+    #loupe {
+        height: 35px;
+    }
+
+    .rechercherconsole {
+        display: flex;
+        justify-content: center;
+        font-family: 'bank_gothic_light', sans-serif;
+        margin-top: 30px;
+    }
+
+    .jeux_container {
+        display: flex;
+        flex-direction: row;
+        height: 20vh;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .platforme {
+        border: 5px solid black;
+        margin: 10px;
+        height: 15vh;
+        width: 20vw;
+        object-fit: contain;
+        max-width: 270px;
+        min-width: 210px;
+    }
+
+    .plus_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .plus {
+        border: 5px solid black;
+        margin-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .rechercherfranchise {
+        display: flex;
+        justify-content: center;
+        font-family: 'bank_gothic_light', sans-serif;
+        margin-top: 30px;
+    }
+
+    .franchise {
+        border: 5px solid black;
+        margin: 10px;
+        height: 15vh;
+        width: 20vw;
+        object-fit: fill;
+        max-width: 270px;
+        min-width: 210px;
+    }
+    /*FIN PAGE ASSISTANT DESKTOP*/
+
+    /*DÉBUT PAGE JEUX DESKTOP*/
+    .textDebut_container {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+    
+    .textDebut {
+        width: 50vw;
+        text-align: center;
+        border: 5px solid black;
+        padding: 20px;
+        min-width: 480px;
+        max-width: 750px;
+        margin-top: 5px;
+    }
+    
+    .shrek_container {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+    
+    .shrek {
+        height: 45vh;
+        width: 50vw;
+        border: 5px solid black;
+        min-width: 480px;
+        max-width: 750px;
+    }
+    
+    .textFin {
+        width: 50vw;
+        text-align: center;
+        border: 5px solid black;
+        padding: 20px;
+        min-width: 480px;
+        max-width: 750px;
+        margin-bottom: 5px;
+    }
+
+    .textBANL {
+        width: 19vw;
+        text-align: center;
+        border: 5px solid black;
+        padding: 20px;
+        max-width: 375px;
+        min-width: 240px;
+        max-height: 75px;
+    }
+
+    .BA_NL {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /*FIN PAGE JEUX DESKTOP*/
+}
+
+

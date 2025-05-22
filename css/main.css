@@ -39,7 +39,7 @@ body {
 
 header {
   background-color: black;
-  width: 100vw;
+  width: 100%;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -121,7 +121,7 @@ main {
 footer {
   background-color: black;
   color: white;
-  width: 100vw;
+  width: 100%;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -227,7 +227,7 @@ body {
 ----------------------------------------------------------*/ 
 header {
   background-color: black;
-  width: 100vw;
+  width: 100%;
   min-height: 150px;
   display: flex;
   align-items: center;
@@ -311,7 +311,7 @@ object-fit: contain;
 footer {
   background-color: black;
   color: white;
-  width: 100vw;
+  width: 100%;
   padding: 40px 60px;
   display: flex;
   justify-content: center;
