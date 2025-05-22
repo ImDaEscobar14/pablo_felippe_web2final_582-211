@@ -37,6 +37,7 @@ body {
   font-family: 'bank_gothic_medium', sans-serif;
 }
 
+/*couleur de fond du header, largeur 100% de l'ecran, centrer les éléments du header */
 header {
   background-color: black;
   width: 100%;
@@ -44,18 +45,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-
-
-/*.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  align-items: center;
-}*/
 
 /* C'est tout ce que l'on retrouve dans ma nav*/
 .nav-container {
@@ -65,18 +55,16 @@ header {
   flex-direction: row-reverse;
   gap: 20px; /* espace entre logo et hamburger */
   padding: 0 20px;
-  
   position: relative;
 }
 
+/*taille du logo Square Enix*/
 .logo-header {
   height: 60px;
   order: 1; /* premier élément */
-}
-
-.logo-header {
   width: 200px;
 }
+
 
 .menu-toggle {
   background: none;
@@ -86,12 +74,14 @@ header {
   z-index: 3;
 }
 
+/*stylisé le menu hamburger, placer les bars, changer leur tailles, couleurs, radius*/
 .menu-toggle .bar {
   width: 40px;
-  height: 10px;
+  height: 7px;
   background-color: white;
   border-radius: 10px;
   display: block;
+  margin: 3px;
 }
 
 .nav {
@@ -114,21 +104,24 @@ header {
 
 
 /*MAIN*/
+
+/*etablie la couleur de l'arrière plan du main*/
 main {
   background-color: #3C3C3C;
 }
 
+/*FOOTER*/
+
+/*couleur d'arrière plan, largeur 100%*/
 footer {
   background-color: black;
   color: white;
   width: 100%;
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
   font-family: 'bank_gothic_medium', sans-serif;
-  flex-direction: column;
 }
 
+/*centrer les elements du footer, les placer en column un au dessus de l'autre (mobile)*/
 .footer-wrapper {
   display: flex;
   flex-direction: column;
@@ -136,6 +129,7 @@ footer {
   gap: 16px;
 }
 
+/*centrer la liste de textes du footer, les mettres en majuscule, appliquer la police*/
 .footer-links {
   list-style: none;
   text-align: center;
@@ -148,26 +142,28 @@ footer {
   font-family: 'bank_gothic_medium', sans-serif;
 }
 
+/*centrer les logos des reseaux, */
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
   margin-top: 10px;
 }
 
+/*definir la taille des icon des reseaux sociaux*/
 .social-icons img {
   width: 24px;
   height: 24px;
-
 }
 
+/*taille et placement du logo*/
 .footer-logo {
   height: 50px;
   position: relative;
   top: 85px;
 }
 
+/*mettre la liste en colonne*/
 .liste {
   display: flex;
   flex-direction: column;
@@ -175,23 +171,20 @@ footer {
   gap: 10px;
 }
 
-.liste ul {
-  list-style: none;
-  font-size: 16px;
-  text-align: center;
-}
-
+/*taille et placement des lignes rouges et blanches*/
 .lignes {
   display: flex;
   justify-content: center;
   height: 100px;
 }
 
+/*faire en sorte que les lignes sois relatif, pour pouvoir ensuite placer a coté du logo*/
 .ligne_design {
   position: relative;
   height: 120px;
 }
 
+/*placer les lignes et le logo un a coté de l'autre */
 .footer_fin {
   display: flex;
   flex-direction: row;

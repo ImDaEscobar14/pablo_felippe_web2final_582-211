@@ -12,16 +12,20 @@
 }
 
 /*DÉBUT PAGE ASSISTANCE MOBILE*/
+
+/*texte recherche par jeux, centrer plus mettre la font*/
 .rechercherjeux {
     display: flex;
     justify-content: center;
     font-family: 'bank_gothic_light', sans-serif;
 }
 
+/*taille de la loupe dans la barre de recherche*/
 #loupe {
     height: 35px;
 }
 
+/*centrer la barre de recherche*/
 .barre-de-recherche {
     display: flex;
     align-items: center;
@@ -29,12 +33,14 @@
     padding: 5px;
 }
 
+/*styliser l'ecriture dans la barre de recherche*/
 #rechercher::placeholder {
     color: black;
     text-transform: uppercase;
     padding-left: 5px;
 }
 
+/*taille de la barre de recherche, couleur, ajout d'une bordure*/
 #rechercher {
     height: 48px;
     width: 100%;
@@ -44,11 +50,13 @@
     padding-left: 5px;
 }
 
+/*couleur + bordure pour le bouton loupe*/
 button {
     background-color: rgba(255, 255, 255, 0);
     border: 5px solid black;
 }
 
+/*centrer le texte "rechercher par console", appliquer font, ajout d'un margin*/
 .rechercherconsole {
     display: flex;
     justify-content: center;
@@ -56,13 +64,16 @@ button {
     margin-top: 30px;
 }
 
+/*centrer la div contenant les carrés des consoles et de jeux, le mettre un par dessus l'autre en column, taille des div*/
 .jeux_container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 50vh;
     width: 100%;
 }
 
+/*ajout d'une bordure a chaque image, taille des images, object fit pour bien placer les images dans leur conteneur (faire en sorte qu'elles apparaissent au complet, mais ne depassent pas)*/
 .platforme {
     display: flex;
     align-self: center;
@@ -73,11 +84,13 @@ button {
     object-fit: contain;
 }
 
+/*Centrer les boutons 3 petits points (...)*/
 .plus_container {
     display: flex;
     justify-content: center;
 }
 
+/*ajouter une bordure aux boutons, créer un espace entre eux et leur bordure */
 .plus {
     border: 5px solid black;
     margin-bottom: 5px;
@@ -85,6 +98,7 @@ button {
     padding-right: 15px;
 }
 
+/*centrer le texte "rechercher franchise" ajout d'un font, ajout de margin pour faire de l'espace*/
 .rechercherfranchise {
     display: flex;
     justify-content: center;
@@ -92,6 +106,7 @@ button {
     margin-top: 30px;
 }
 
+/*ajout d'une bordure a chaque image, taille des images, object fit pour bien placer les images dans leur conteneur (faire en sorte qu'elles apparaissent au complet, mais ne depassent pas)*/
 .franchise {
     display: flex;
     align-self: center;
@@ -101,15 +116,48 @@ button {
     width: 20vh;
     object-fit: cover;
 }
+
+/*placer le titre de chaque jeu au desus de son image, centré, en blanc, bold, 0 opacité, transition pour faire apparaitre le texte (monter opacité)*/
+.franchise_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+/*monter l'opacité du texte sur les images afin de la faire apparaitre quand on hover les images*/
+.franchise_box:hover .franchise_text {
+    opacity: 1;
+}
+
+/*permet de placer les textes (qui sont position absolute) par dessus les images*/
+.franchise_box {
+    position: relative;
+}
+
+/*lever la luminosité des image lors du hover*/
+.franchise_box:hover .franchise {
+    filter: brightness(50%);
+}
 /*FIN PAGE ASSISTANT MOBILE*/
 
 /*DÉBUT PAGE JEUX MOBILE*/
+
 .textDebut_container {
+    /*centrer le container du premier paragraphe*/
     display: flex;
     justify-content: center;
     margin: 5px;
 }
 
+/*etablir la largeur, centrer le texte dans le container, ajout d'une bordure, ajout d'une police*/
 .textDebut {
     width: 50vw;
     text-align: center;
@@ -119,18 +167,21 @@ button {
     margin-top: 5px;
 }
 
+/*container de l'image du jeu, centré, margin pour créer un espace avec les autres éléments*/
 .shrek_container {
     display: flex;
     justify-content: center;
     margin: 5px;
 }
 
+/*image du jeu, taille + bordure*/
 .shrek {
     height: 15vh;
     width: 50vw;
     border: 5px solid black;
 }
 
+/*container du dernier paragraphe, etablir la largeur, centrer le texte, ajout d'une bordure, ajout d'une police*/
 .textFin {
     width: 50vw;
     text-align: center;
@@ -140,6 +191,7 @@ button {
     margin-bottom: 5px;
 }
 
+/*containers des texte bandes annonces et newletters, etablir largeur, centrer le texte a l'interieur, ajout de bordures + police*/
 .textBANL {
     width: 50vw;
     text-align: center;
@@ -148,6 +200,7 @@ button {
     font-family: "poppins_light";
 }
 
+/*placer les container bande annonce et newsletter un au dessus de l'autres (column) + les centrés*/
 .BA_NL {
     display: flex;
     align-items: center;
@@ -159,12 +212,15 @@ button {
 @media (min-width: 750px) {
 
     /*DÉBUT PAGE ASSISTANT DESKTOP*/
+    
+    /*texte recherche par jeux, centrer plus mettre la font*/
     .rechercherjeux {
         display: flex;
         justify-content: center;
         font-family: 'bank_gothic_light', sans-serif;
     }
-
+    
+    /*centrer la barre de recherche*/
     .barre-de-recherche {
         background-color: rgba(255, 255, 255, 0);
         display: flex;
@@ -172,14 +228,16 @@ button {
         justify-content: center;
         padding: 5px;
     }
-
+    
+    /*styliser l'ecriture dans la barre de recherche*/
     #rechercher::placeholder {
         color: black;
         font-size: 30px;
         text-transform: uppercase;
         padding-left: 5px;
     }
-
+    
+    /*taille de la barre de recherche, couleur, ajout d'une bordure*/
     #rechercher {
         height: 48px;
         width: 100%;
@@ -189,15 +247,17 @@ button {
         padding-left: 5px;
     }
 
+    /*couleur + bordure pour le bouton loupe*/
     button {
         background-color: rgba(255, 255, 255, 0);
         border: 5px solid black;
     }
-
+    /*taille de la loupe dans la barre de recherche*/
     #loupe {
         height: 35px;
     }
 
+    /*centrer le texte "rechercher par console", appliquer font, ajout d'un margin*/
     .rechercherconsole {
         display: flex;
         justify-content: center;
@@ -205,6 +265,7 @@ button {
         margin-top: 30px;
     }
 
+    /*centrer la div contenant les carrés des consoles et de jeux, les mettre un à coté de l'autre en column, taille des div*/
     .jeux_container {
         display: flex;
         flex-direction: row;
@@ -212,7 +273,8 @@ button {
         width: 100%;
         justify-content: center;
     }
-
+    
+    /*ajout d'une bordure a chaque image, taille des images, object fit pour bien placer les images dans leur conteneur (faire en sorte qu'elles apparaissent au complet, mais ne depassent pas)*/
     .platforme {
         border: 5px solid black;
         margin: 10px;
@@ -223,11 +285,13 @@ button {
         min-width: 210px;
     }
 
+    /*Centrer les boutons 3 petits points (...)*/
     .plus_container {
         display: flex;
         justify-content: center;
     }
 
+    /*ajouter une bordure aux boutons, créer un espace entre eux et leur bordure */
     .plus {
         border: 5px solid black;
         margin-bottom: 5px;
@@ -235,6 +299,7 @@ button {
         padding-right: 15px;
     }
 
+    /*centrer le texte "rechercher franchise" ajout d'un font, ajout de margin pour faire de l'espace*/
     .rechercherfranchise {
         display: flex;
         justify-content: center;
@@ -242,6 +307,7 @@ button {
         margin-top: 30px;
     }
 
+    /*ajout d'une bordure a chaque image, taille des images, object fit pour bien placer les images dans leur conteneur (faire en sorte qu'elles apparaissent au complet, mais ne depassent pas)*/
     .franchise {
         border: 5px solid black;
         margin: 10px;
@@ -251,15 +317,49 @@ button {
         max-width: 270px;
         min-width: 210px;
     }
+
+    /*placer le titre de chaque jeu au desus de son image, centré, en blanc, bold, 0 opacité, transition pour faire apparaitre le texte (monter opacité)*/
+    .franchise_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center;
+    }
+
+    /*monter l'opacité du texte sur les images afin de la faire apparaitre quand on hover les images*/
+    .franchise_box:hover .franchise_text {
+    opacity: 1;
+    }
+
+    /*permet de placer les textes (qui sont position absolute) par dessus les images*/
+    .franchise_box {
+    position: relative;
+    }
+
+    /*lever la luminosité des image lors du hover*/
+    .franchise_box:hover .franchise {
+    filter: brightness(50%);
+    }
+
     /*FIN PAGE ASSISTANT DESKTOP*/
 
     /*DÉBUT PAGE JEUX DESKTOP*/
+    /*centrer le container du premier paragraphe*/
     .textDebut_container {
         display: flex;
         justify-content: center;
         margin: 5px;
     }
     
+    /*etablir la largeur, centrer le texte dans le container, ajout d'une bordure*/
     .textDebut {
         width: 50vw;
         text-align: center;
@@ -270,12 +370,14 @@ button {
         margin-top: 5px;
     }
     
+    /*container de l'image du jeu, centré, margin pour créer un espace avec les autres éléments*/
     .shrek_container {
         display: flex;
         justify-content: center;
         margin: 5px;
     }
     
+    /*image du jeu, taille + bordure*/
     .shrek {
         height: 45vh;
         width: 50vw;
@@ -283,7 +385,8 @@ button {
         min-width: 480px;
         max-width: 750px;
     }
-    
+
+    /*container du dernier paragraphe, etablir la largeur, centrer le texte, ajout d'une bordure, margin pour creer un espace en bas, min et max width pour ne pas deformer l'imaage, ne pas trop grandir et/ou retrecir*/
     .textFin {
         width: 50vw;
         text-align: center;
@@ -294,16 +397,18 @@ button {
         margin-bottom: 5px;
     }
 
+    /*containers des textes bandes annonces et newletters, etablir largeur, centrer le texte a l'interieur, ajout de bordures + police*/
     .textBANL {
-        width: 19vw;
+        width: 19.7vw;
         text-align: center;
         border: 5px solid black;
         padding: 20px;
-        max-width: 375px;
+        max-width: 400px;
         min-width: 240px;
         max-height: 75px;
     }
 
+    /*placer les container bande annonce et newsletter un au dessus de l'autres (column) + les centrés*/
     .BA_NL {
         display: flex;
         flex-direction: row;

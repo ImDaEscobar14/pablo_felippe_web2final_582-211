@@ -10,13 +10,11 @@
 <body>
     <header>
         <div class="nav-container">
-
             <button class="menu-toggle" aria-label="Menu">
              <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-
             <ul class="nav">
                 <div class="nav-gauche">
                     <li><a>Jeux</a></li>
@@ -34,18 +32,22 @@
     </header>
 
     <main>
+        <!--titre en haut de page -->
         <h1 class="rechercherjeux">
             RECHERCHER PAR JEUX
         </h1>
+        <!--creation de div pour la barre de recherche + loupe -->
         <div class="barre-de-recherche">
             <input type="text" placeholder="Rechercher" id="rechercher">
             <button>
                 <img src="./assets/images/loupe.png" alt="" id="loupe">
             </button>
         </div>
+        <!--titre "rechercher par console" -->
         <h1 class="rechercherconsole">
             RECHERCHER PAR CONSOLE
         </h1>
+        <!--j'ai créer deux div pour contenir tout les images des platformes-->
         <div class="jeux_container">
             <img src="./assets/images/switch.png" alt="switch" class="platforme">
             <img src="./assets/images/ps5.png" alt="ps5" class="platforme">
@@ -58,24 +60,52 @@
             <img src="./assets/images/xboxone.png" alt="xboxone" class="platforme">
             <img src="./assets/images/android.png" alt="android" class="platforme">
         </div>
+        <!--j'ai créer deux div pour faire ma case (...)-->
         <div class="plus_container">
             <h2 class="plus">...</h2>
         </div>
+        <!--titre "rechercher par franchise"-->
         <h1 class="rechercherfranchise">
             RECHERCHER PAR FRANCHISE
         </h1>
+        <!--j'ai créer plusieurs div pour contenir les images des jeux et leurs titres-->
         <div class="jeux_container">
-            <img src="./assets/images/FF.png" alt="FF" class="franchise">
-            <img src="./assets/images/DQ.png" alt="DQ" class="franchise">
-            <img src="./assets/images/TR.png" alt="TR" class="franchise">
-            <img src="./assets/images/LIS.png" alt="LIS" class="franchise">
+            <div class="franchise_box">
+                <img src="./assets/images/FF.png" alt="FF" class="franchise">
+                <span class="franchise_text">Final Fantasy</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/DQ.png" alt="DQ" class="franchise">
+                <span class="franchise_text">Dragon Quest</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/TR.png" alt="TR" class="franchise">
+                <span class="franchise_text">Tomb Raider</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/LIS.png" alt="LIS" class="franchise">
+                <span class="franchise_text">Life is Strange</span>
+            </div>
         </div>
         <div class="jeux_container">
-            <img src="./assets/images/KH.png" alt=" KH" class="franchise">
-            <img src="./assets/images/NA.png" alt="NA" class="franchise">
-            <img src="./assets/images/RS.png" alt="RS" class="franchise">
-            <img src="./assets/images/BD.png" alt="BD" class="franchise">
+            <div class="franchise_box">
+                <img src="./assets/images/KH.png" alt="KH" class="franchise">
+                <span class="franchise_text">Kingdom Hearts</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/NA.png" alt="NA" class="franchise">
+                <span class="franchise_text">Nier Automata</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/RS.png" alt="RS" class="franchise">
+                <span class="franchise_text">Romancing SaGa</span>
+            </div>
+            <div class="franchise_box">
+                <img src="./assets/images/BD.png" alt="BD" class="franchise">
+                <span class="franchise_text">Bravely Default</span>
+            </div>
         </div>
+        <!--j'ai créer deux div pour faire ma case (...)-->
         <div class="plus_container">
             <h2 class="plus">...</h2>
         </div>
