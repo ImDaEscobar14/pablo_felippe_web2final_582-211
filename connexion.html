@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
@@ -8,34 +9,38 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style_pp.css">
 </head>
+
 <body>
+    <!--- Le header-->
     <header>
         <div class="nav-container">
 
             <button class="menu-toggle" aria-label="Menu">
-             <span class="bar"></span>
+                <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
 
             <ul class="nav">
                 <div class="nav-gauche">
-                    <li><a>Jeux</a></li>
-                    <li><a>Assistance</a></li>
+                    <li><a href="./jeux.html">Jeux</a></li>
+                    <li><a href="./assistance.html">Assistance</a></li>
                 </div>
                 <li class="logo-li">
                     <img src="./assets/images/logo_square_figma.png" alt="Logo" class="logo-header">
                 </li>
                 <div class="nav-droite">
-                    <li><a>Actualité</a></li>
-                    <li><a>Connexion</a></li>
+                    <li><a href="./index.html">Actualité</a></li>
+                    <li><a href="./connexion.html">Connexion</a></li>
                 </div>
             </ul>
-            </div>
+        </div>
     </header>
-
+    <!--- Le main-->
     <main>
+        <!---J'ai creer cette div qui contient deux div pour mieux les structurer en css-->
         <div class="page-connexion">
+            <!--- La premiere div sur deux qui est structurer de maniere que je puisse bien placer chaque element facilement au travers de mon css-->
             <div class="connexion">
                 <h1>CONNEXION</h1>
                 <br>
@@ -45,16 +50,23 @@
                 <input type="text">
                 <br>
                 <br>
+                <!--- J'ai creer une div pour mieux cibler l'element et je lui est ajouter un ID-->
                 <div class="remember">
-                    <input type="checkbox" id="souvenir"> 
+                    <input type="checkbox" id="souvenir">
                     <label for="souvenir">SE SOUVENIR DE MOI</label>
                 </div>
+                <!--- J'ai fait un bouton pour suivre le design de figma et je lui est donner un ID pour mieux la cibler-->
                 <button id="bouton-connexion">SE CONNECTER</button>
+                <br>
+                <br>
+                <h3 class="scanner-qr">OU <br> <br> scanner le code à partir de l’application SQUARE ENIX pour vous
+                    connecter</h3>
                 <img src="assets/images/code_qr.png" class="qr">
                 <br>
                 <br>
-                
+
             </div>
+            <!--- La deuxieme div qui occupe l'autre moitie de la page et qui suit la meme structure que la premiere div-->
             <div class="creation-compte">
                 <h1>CRÉER VOTRE COMPTE</h1>
                 <br>
@@ -76,6 +88,7 @@
             </div>
         </div>
     </main>
+    <!--Le footer-->
     <footer>
         <div class="footer-container">
             <ul class="footer-links">
@@ -105,7 +118,8 @@
                     <img src="./assets/images/logo_square_figma.png" alt="Logo Square Enix" class="footer-logo">
                 </div>
             </div>
-    
-        </footer>
+
+    </footer>
 </body>
+
 </html>

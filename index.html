@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./css/style_pp.css">
 </head>
 <body>
+    <!---Le header-->
         <header>
+            <!--- -->
             <div class="nav-container">
     
                 <button class="menu-toggle" aria-label="Menu">
@@ -19,48 +21,52 @@
     
                 <ul class="nav">
                     <div class="nav-gauche">
-                        <li><a>Jeux</a></li>
-                        <li><a>Assistance</a></li>
+                        <li><a href="./jeux.html">Jeux</a></li>
+                        <li><a href="./assistance.html">Assistance</a></li>
                     </div>
                     <li class="logo-li">
                         <img src="./assets/images/logo_square_figma.png" alt="Logo" class="logo-header">
                     </li>
                     <div class="nav-droite">
-                        <li><a>Actualité</a></li>
-                        <li><a>Connexion</a></li>
+                        <li><a href="./index.html">Actualité</a></li>
+                        <li><a href="./connexion.html">Connexion</a></li>
                     </div>
                 </ul>
                 </div>
         </header>
     
+        <!--Le main-->
         <main>
+            <!--- J'ai creer une div pour la barre de recherche que j'ai accompagner d'une photo d'une loupe-->
             <div class="barre-de-recherche">
                 <input type="text" placeholder="Rechercher" id="rechercher">
                 <button>
                     <img src="./assets/images/loupe.png" alt="" id="loupe">
                 </button>
             </div>
-
+            <!---C'est la parti de ma page ou l'on voit l'image et l'information et j'ai ajouter un ID pour retrouver l'image-->
             <div class="nouvelle">
                 <img src="./assets/images/image_caroussel_01.png" alt="" id="nouvelle_01">
+                <!--J'ai creer cette div pour mieux la retrouver dans mon css -->
                 <div class="info_nouvelle">
                     <p> <strong>SaGA Emerald Beyond rejoint le monde de Vampires Survivors</strong>
                         Une nouvelle étape, des personnages jouables, des armes et plus encore sont désormais disponibles dans Vampire Survivors, inspiré par le RPG.</p>
                 </div>
             </div>
-
+            <!--- J'ai fais un UL pour mettre mes images de logo pour mieux les structurer par la suite en css et aussi je les ai tous nomme de la meme facons pour mieux les gerer-->
             <ul style="list-style-type: none;" class="jeux">
                 <li class="logo-jeux"><img src="./assets/images/ff_logo.png" alt="" class="logo_01"></li>
                 <li class="logo-jeux"><img src="./assets/images/power_wash_logo.png" alt="" class="logo_01"></li>
                 <li class="logo-jeux"><img src="./assets/images/dragonquest_logo.png" alt="" class="logo_01"></li>
                 <li class="logo-jeux"><img src="./assets/images/life_is_strange_logo.png" alt="" class="logo_01"></li>
             </ul>
-
+            <!---La derniere parti de ma page qui montre une image d'une nouvelle actualite-->
             <div class="summer-sales">
                 <img src="./assets/images/summer_sales.png" alt="" class="poster-sales">
             </div>
 
         </main>
+        <!--- Le footer-->
         <footer>
         <div class="footer-container">
             <ul class="footer-links">

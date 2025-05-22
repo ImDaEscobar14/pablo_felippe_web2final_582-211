@@ -1,9 +1,14 @@
+/*---------------------------------------------------------------------------------*/
+/*Format mobile*/
+
+/*Page d'actualite*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
+  /*La barre de recherche que j'ai centrer pour essayer de la rendre aussi grande que l'image qui suit la barre*/
   .barre-de-recherche {
     background-color: rgba(255, 255, 255, 0);
     display: flex;
@@ -12,15 +17,31 @@
     padding: 5px;
   }
 
+  /* L'image de la loupe qui est un bouton pour lorsqu'on ecrit se que l'on veut*/
 button {
     background-color: rgba(255, 255, 255, 0);
     border: 5px solid black;
   }
 
+/* L'image de la loupe avec quelque petit style d'hover qui on n'etait pas sur le figma pour rendre l'experience differente en mettant un transition lors du hover pour que ce soit limage qui sort et non la boite*/
 #loupe {
-    height: 37px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  height: 48px;
+  margin-top: 2px;
+}
+
+#loupe:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+ /*Jai enlever le border car en mobile je n'arrivait pas a faire que la boite (border soit bien aligner)*/
+button {
+  background-color: transparent;
+  border: none;
 }
   
+/*Ma barre de recherche avec le placeholder pour qu'on puisse voir le mot "Rechercher" quand on n'appuie pas*/
 #rechercher {
     height: 48px;
     width: 100%;
@@ -37,23 +58,23 @@ button {
     text-transform: uppercase;
     padding-left: 5px;
 }
-
+/*La place ou j'ai mis le style pour ma photo de nouvelle et le text que j'ai separer*/
 .nouvelle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  
   border: none;
 }
-
+/*Le style pour ma photo*/
 #nouvelle_01{
   border: 10px solid black;
   width: 75vw;
   max-width: 1250px;
 }
 
+/*Le style pour le text que j'ai fait en sorte qu'il soit responsive (qui s'aggrendi et retressi avec la page) */
 .info_nouvelle {
   width: 76%;
   font-size: large;
@@ -65,31 +86,39 @@ button {
   max-width: 1250px;
 }
 
+/*La classe que j'ai fait pour toutes les images "liens" vers les jeux de la compagnie*/
 .jeux {
   display: flex;
+  flex-direction: column; /*J'ai mis en colonne pour la version mobile pour respecter le figma*/
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center; /*Pour bien aligner les images au centre*/
   gap: 20px;
   padding: 20px;
   list-style: none;
 }
 
-.logo-jeux {
-  flex: 1 1 80%;  /* Large sur mobile */
-  display: flex;
-  justify-content: center;
-}
-
+/*C'est ici que j'ai stylise les images pour les mettre dans des boites qui soient toutes aussi grande*/
 .logo_01 {
   width: 50vw;
-  height: 200px; /* Hauteur uniforme pour toutes les images */
+  height: 200px; /* Pour que toutes les images soient pareille malgre leurs differente taille*/
   border: solid black 10px;
   margin: 10px;
   padding: 10px;
+  margin-left: 40px; /*J'ai essayer de bien mettre les boites centrer avec un margin*/
   object-fit: contain;
-  max-width: 76%; /* Corrigé avec unité */
+  max-width: 76%;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/*Ici un hover que j'ai essayer quelque chose en mettant un filter pour qu'il soit plus brillent de 60 %m quand on hover*/
+.logo_01:hover {
+  transform: scale(1.05);
+  filter: brightness(1.6);
+  cursor: pointer;
+}
+
+/*La classe de ma derniere image sur la page qui montre un "summer sale"*/
 .summer-sales {
   display: flex;
   align-items: center;
@@ -97,52 +126,43 @@ button {
   padding-bottom: 10px;
 }
 
+/*La classe que jai donne a l'image en soit en la mettant de la meme largeur que l'image du haut*/
 .poster-sales {
   border: solid 10px black;
   width: 75%;
   max-width: 1250px;
 }
 
+/*-------------------------------------------------------------------------------*/
+/*Page de connexion*/
+
+/*La div principal qui a 2 div a l'interieur que j'ai mis en flex pour les mettres cote a cote dans la page*/
 .page-connexion {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   padding: 25px;
+  
 }
 
-.creation-compte,
+
+/*Les deux div qui sont cote a cote*/
 .connexion,
-input {
+.creation-compte {
   width: 350px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
 }
 
-.remember {
-  display: flex;
-  width: 100%;
-  text-align: start;
-  align-items: center;
-  justify-content: space-around;
-}
+/*-----------------------------------------------------------------------------------*/
+/*Format desktop*/
 
-#souvenir {
-  width: 25px;
-  height: 25px;
-  padding: 0px;
-}
-
-.qr {
-  width: 340px;
-}
-
-#bouton-connection {
-  color: white;
-}
-
+/*On a decider de diminuer un peu le min de la page pour qu'elle devient en desktop comparer au figma*/
 @media (min-width: 750px){
+  /*--------------------------------------------------------------------------------*/
+  /*Page d'actualite*/
+  
+  /* Il n'y a pas grand changement pour la version desktop que j'ai apporter car elle suivait bien l'exemple de figma*/
   .barre-de-recherche {
     background-color: rgba(255, 255, 255, 0);
     display: flex;
@@ -150,16 +170,17 @@ input {
     justify-content: center;
     padding: 5px;
   }
-
+/*Garder le meme style que javais pour mobile*/
 button {
     background-color: rgba(255, 255, 255, 0);
     border: 5px solid black;
   }
 
+  /*J'ai garder la meme grandeur du mobile a desktop pour l'image de la loupe*/
 #loupe {
     height: 37px;
 }
-  
+  /*J'ai garder la meme barre de recherche de mobile a desktop et fait en sorte que lorsque la page se retreci, la boite aussi.*/
 #rechercher {
     height: 48px;
     width: 72%;
@@ -168,7 +189,7 @@ button {
     font-size: large;
     padding-left: 5px;
 }
-
+/*Pas de changement pour le placeholder garder le meme que mobile*/
 #rechercher::placeholder {
     color: black;
     font-size: 30px;
@@ -199,13 +220,13 @@ button {
   margin-right: 50px;
   text-align: center;
 }
-
+/*Pas mal similaire que le mobile mais j'ai juste mis en row a la place de colonne pour respecter le figma*/
 .jeux {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;            /* pour passer à la ligne si nécessaire */
-  justify-content: center;    /* centrer horizontalement */
-  gap: 20px;                  /* espace entre les logos */
+  flex-wrap: wrap;            /* pour passer a la ligne suivante si necessaire */
+  justify-content: center;    
+  gap: 20px;                  /* J'ai utiliser gap pour donner un espace entre les logos */
   padding: 0;
   margin: 0 auto;
   list-style: none;
@@ -213,12 +234,14 @@ button {
   max-width: 1250px;
 }
 
+/*J'ai essayer d'ajouter du grow et shrink en suivant se que figma me disait*/
+/*J'ai aussi vu que ca faisait un effet different des logos en les mettant dans une largeur plus petite que celle des deux photos de nouvelle*/
 .logo-jeux {
   flex: 1 1 200px;            /* flex-grow, flex-shrink, flex-basis */
   display: flex;
   justify-content: center;
 }
-
+/*Pas plus different que la version mobile*/
 .summer-sales {
   display: flex;
   align-items: center;
@@ -232,12 +255,102 @@ button {
   max-width: 1250px;
 }
 
+/*J'ai fait une div qui contient deux div et en desktop ses deux div sont place en row en laissant juste le style flex*/
 .page-connexion {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-direction: row;
+  gap: 40px;
   padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
 }
+
+
+.connexion, .creation-compte {
+  flex: 1;
+}
+
+/*J'ai essayer de mettre tout mes titres similaire dans leurs alignement vers la gauche de leurs boites d'input et c'est avec ca que j'ai pu*/
+.connexion h2,
+.creation-compte h2 {
+  text-align: left;
+  width: 350px; 
+  padding-left: 10px; 
+  margin-bottom: 5px; 
+  margin-top: 15px;
+}
+
+/*.connexion input,
+.creation-compte input {
+  width: 350px;
+  padding-left: 10px;
+}*/
+
+/*C'est pour faire en sorte que les boites d'input soient comme ceux dans figma*/
+.creation-compte,
+.connexion,
+input {
+  width: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+/*C'est le bouton "se souvenir de moi" que j'ai reussi a mettre vers la gauche*/
+.remember {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  width: 350px; 
+  padding-left: 10px; 
+  gap: 10px; 
+}
+
+/*Grace au ID j'ai fait en sorte qu'il reste "vivant" sinon il n'apparait pas comme il le faut*/
+#souvenir {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+/*Juste pour la photo du code qr*/
+.qr {
+  width: 340px;
+}
+
+
+/*Pour que mon bouton connexion soit au centre*/
+.connexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*C'est le bouton "se connecter" que j'ai voulu essayer de nouvel chose avec une transition lorsqu'on apparait sur la page et j'ai ajouter un hover*/
+#bouton-connexion {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+#bouton-connexion:hover {
+  background-color: white;
+  color: black;
+}
+
+/*C'est le text qui dit de scanner si on le veut, j'ai fait en sorte qu'il soit aligner vers le centre*/
+.scanner-qr {
+  width: 350px;
+  padding-left: 10px;
+  text-align: center;
+}
+
 }
 
   
