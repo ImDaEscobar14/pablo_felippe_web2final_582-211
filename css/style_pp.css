@@ -59,7 +59,7 @@ button {
     padding-left: 5px;
 }
 /*La place ou j'ai mis le style pour ma photo de nouvelle et le text que j'ai separer*/
-.nouvelle {
+/*.nouvelle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,14 +68,14 @@ button {
   border: none;
 }
 /*Le style pour ma photo*/
-#nouvelle_01{
+/*#nouvelle_01{
   border: 10px solid black;
   width: 75vw;
   max-width: 1250px;
 }
 
 /*Le style pour le text que j'ai fait en sorte qu'il soit responsive (qui s'aggrendi et retressi avec la page) */
-.info_nouvelle {
+/*.info_nouvelle {
   width: 76%;
   font-size: large;
   border: solid 10px black;
@@ -84,7 +84,34 @@ button {
   margin-right: 50px;
   text-align: center;
   max-width: 1250px;
+}*/
+
+.nouvelle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border: none;
+  text-align: center;
 }
+
+#nouvelle_01 {
+  border: 10px solid black;
+  width: 75vw;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.info_nouvelle {
+  width: 90%;
+  max-width: 1250px;
+  font-size: 18px;
+  border: solid 10px black;
+  padding: 25px;
+  margin: 20px auto;
+  text-align: center;
+}
+
 
 /*La classe que j'ai fait pour toutes les images "liens" vers les jeux de la compagnie*/
 .jeux {
@@ -141,18 +168,106 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
   padding: 25px;
-  
+}
+/*Bouton qui suit les meme style qu'en desktop avec l'ajoue du hover qui n'etait pas dans le figma et aussi une petite transition*/
+#bouton-connexion,
+#bouton-inscription {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+#bouton-connexion:hover,
+#bouton-inscription:hover {
+  background-color: white;
+  color: black;
+}
 
 /*Les deux div qui sont cote a cote*/
 .connexion,
 .creation-compte {
-  width: 350px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/*Pour que mes h2 soient vers la gauche*/
+.connexion h2,
+.creation-compte h2 {
+  text-align: left;
+  width: 100%;
+  padding-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Champs de texte input pour les rendre comme en desktop*/
+.connexion input,
+.creation-compte input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+}
+
+/*Mon checkbox avec les mots */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+#souvenir {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* les deux checkbox de la partie d'inscription*/
+.politique-user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 5px;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.politique-user label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/*Le text pour qu'il soit bien aligne au centre*/
+.scanner-qr {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.qr {
+  width: 280px;
+}
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /*Format desktop*/
@@ -220,8 +335,10 @@ button {
   margin-right: 50px;
   text-align: center;
 }
+
+
 /*Pas mal similaire que le mobile mais j'ai juste mis en row a la place de colonne pour respecter le figma*/
-.jeux {
+.jeux{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;            /* pour passer a la ligne suivante si necessaire */
@@ -316,9 +433,7 @@ input {
 }
 
 /*Juste pour la photo du code qr*/
-.qr {
-  width: 340px;
-}
+
 
 
 /*Pour que mon bouton connexion soit au centre*/

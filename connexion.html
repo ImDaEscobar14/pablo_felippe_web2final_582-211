@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQUARE ENIX</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/style_pp.css">
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -61,7 +62,7 @@
                 <br>
                 <h3 class="scanner-qr">OU <br> <br> scanner le code à partir de l’application SQUARE ENIX pour vous
                     connecter</h3>
-                <img src="assets/images/code_qr.png" class="qr">
+                <img src="./assets/images/code_qr.png" class="qr">
                 <br>
                 <br>
 
@@ -85,6 +86,18 @@
                 <h2>NOM D'UTILISATEUR</h2>
                 <input type="text">
                 <br>
+                <div class="politique-user">
+                    <!--vu que cest pour des checkbox on utilise la meme class pour toute-->
+                        <input type="checkbox" id="abonner">
+                        <label for="abonner">Abonnez-vous dès maintenant pour recevoir nos actualités par e-mail</label>
+                        <br>
+                        <br>
+                        <input type="checkbox" id="termes">
+                        <label for="termes">Veuillez cocher la case afin d’accepter les termes et conditions de service de nos sites. </label>
+                </div>
+                <br>
+                <br>
+                <button id="bouton-inscription">INSCRIPTION</button>
             </div>
         </div>
     </main>

@@ -94,14 +94,78 @@ header {
 .logo-li {
   display: block;
 }
-
-.nav-gauche {
-  display: none;
+/*----------------------------------------- gros test pour voir le menu hamburger*/
+/* Styles pour le menu mobile déroulant */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* espace entre logo et menu */
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
 }
+
+.logo-header {
+  height: 60px;
+}
+
+.menu-toggle {
+  margin-left: auto; /* pousse le bouton complètement à droite */
+}
+
+.nav.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  gap: 30px;
+  z-index: 1000;
+}
+
+.nav-gauche,
 .nav-droite {
   display: none;
 }
 
+.nav.open .nav-gauche,
+.nav.open .nav-droite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav.open li {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'bank_gothic_bold', sans-serif;
+}
+
+.nav.open a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.2s;
+}
+
+.nav.open a:hover {
+  background-color: var(--grisfonce);
+  border-radius: 4px;
+}
+
+body.menu-open .logo-header {
+  display: none;
+}
+.nav {
+  display: none;
+}
+/*----------------------------------- fin gros test pour le menu hamburger*/
 
 /*MAIN*/
 
@@ -214,6 +278,10 @@ body {
   color: white;
   font-family: 'bank_gothic_medium', sans-serif;
 }
+
+
+
+
 
 /*---------------------------------------------------------- 
 # SECTION : En-tête (nav, log etc)
@@ -387,6 +455,7 @@ footer {
   bottom: 32px;
   height: 150px;
 }
+
 
 
 }
