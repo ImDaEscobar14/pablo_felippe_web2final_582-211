@@ -4,9 +4,8 @@
     padding: 0;
   }
 
-.barre-de-recherche {
+  .barre-de-recherche {
     background-color: rgba(255, 255, 255, 0);
-    border: 5px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,12 +18,151 @@ button {
   }
 
 #loupe {
-    height: 35px;
+    height: 37px;
 }
   
 #rechercher {
     height: 48px;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid black;
+    font-size: large;
+    padding-left: 5px;
+    max-width: 1200px;
+}
+
+#rechercher::placeholder {
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-left: 5px;
+}
+
+.nouvelle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  border: none;
+}
+
+#nouvelle_01{
+  border: 10px solid black;
+  width: 75vw;
+  max-width: 1250px;
+}
+
+.info_nouvelle {
+  width: 76%;
+  font-size: large;
+  border: solid 10px black;
+  padding: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+  max-width: 1250px;
+}
+
+.jeux {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  list-style: none;
+}
+
+.logo-jeux {
+  flex: 1 1 80%;  /* Large sur mobile */
+  display: flex;
+  justify-content: center;
+}
+
+.logo_01 {
+  width: 50vw;
+  height: 200px; /* Hauteur uniforme pour toutes les images */
+  border: solid black 10px;
+  margin: 10px;
+  padding: 10px;
+  object-fit: contain;
+  max-width: 76%; /* Corrigé avec unité */
+}
+
+.summer-sales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.poster-sales {
+  border: solid 10px black;
+  width: 75%;
+  max-width: 1250px;
+}
+
+.page-connexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.creation-compte,
+.connexion,
+input {
+  width: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.remember {
+  display: flex;
+  width: 100%;
+  text-align: start;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#souvenir {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+}
+
+.qr {
+  width: 340px;
+}
+
+#bouton-connection {
+  color: white;
+}
+
+@media (min-width: 750px){
+  .barre-de-recherche {
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border: 5px solid black;
+  }
+
+#loupe {
+    height: 37px;
+}
+  
+#rechercher {
+    height: 48px;
+    width: 72%;
     background-color: rgba(255, 255, 255, 0);
     border: 5px solid black;
     font-size: large;
@@ -38,3 +176,68 @@ button {
     padding-left: 5px;
 }
 
+.nouvelle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: none;
+}
+
+#nouvelle_01{
+  border: 10px solid black;
+  width: 75vw;
+}
+
+.info_nouvelle {
+  width: 76%;
+  font-size: 30px;
+  border: solid 10px black;
+  padding: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.jeux {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;            /* pour passer à la ligne si nécessaire */
+  justify-content: center;    /* centrer horizontalement */
+  gap: 20px;                  /* espace entre les logos */
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 100%;
+  max-width: 1250px;
+}
+
+.logo-jeux {
+  flex: 1 1 200px;            /* flex-grow, flex-shrink, flex-basis */
+  display: flex;
+  justify-content: center;
+}
+
+.summer-sales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.poster-sales {
+  border: solid 10px black;
+  width: 75%;
+  max-width: 1250px;
+}
+
+.page-connexion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25px;
+}
+}
+
+  
