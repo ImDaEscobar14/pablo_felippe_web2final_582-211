@@ -167,10 +167,43 @@ body.menu-open .logo-header {
   display: none;
 }
 
-
+.manettediv {
+  width: 100vw;
+}
 
 #manette {
-  display: none;
+  height: 50px;
+}
+
+@keyframes TombeRotation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(100px) rotate(90deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(250px) rotate(180deg);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: translateY(400px) rotate(450deg);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(500px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.manettediv:hover #manette {
+  animation: TombeRotation 1.5s ease-in-out;
 }
 
 
@@ -295,7 +328,8 @@ body {
 }
 
 .manettediv {
-  display: flex;
+  position: relative;
+  width: 3vw;
 }
 
 @keyframes TombeRotation {
@@ -352,6 +386,7 @@ header {
 }
 
 .nav {
+position: absolute;
 display: flex;
 justify-content: center;
 align-items: center;
