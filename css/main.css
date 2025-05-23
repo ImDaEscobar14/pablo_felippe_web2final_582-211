@@ -1,16 +1,18 @@
 /*--------------------------------------------------------- 
 # SECTION : Styles généraux
----------------------------------------------------------*/ 
+---------------------------------------------------------*/
 
 /* Polices personnalisées */
 @font-face {
   font-family: 'bank_gothic_light';
   src: url(/assets/polices/Bank\ Gothic\ Light\ Regular.otf) format('opentype');
 }
+
 @font-face {
   font-family: 'bank_gothic_medium';
   src: url(/assets/polices/bank\ gothic\ medium\ bt.ttf) format('opentype');
 }
+
 @font-face {
   font-family: 'bank_gothic_bold';
   src: url(/assets/polices/BankGothic\ Bold.ttf) format('opentype');
@@ -18,7 +20,7 @@
 
 /* Variables pour les couleurs*/
 :root {
-  --red: #E20A16; 
+  --red: #E20A16;
   --grisfonce: #4D4D4D;
   --grispale: #C8C8C8;
 }
@@ -30,7 +32,7 @@
   padding: 0;
 }
 
-/* C'est la couleur de fond de notre page */ 
+/* C'est la couleur de fond de notre page */
 body {
   background-color: black;
   color: white;
@@ -51,9 +53,10 @@ header {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   flex-direction: row-reverse;
-  gap: 20px; /* espace entre logo et hamburger */
+  gap: 20px;
+  /* espace entre logo et hamburger */
   padding: 0 20px;
   position: relative;
 }
@@ -61,7 +64,8 @@ header {
 /*taille du logo Square Enix*/
 .logo-header {
   height: 60px;
-  order: 1; /* premier élément */
+  order: 1;
+  /* premier élément */
   width: 200px;
 }
 
@@ -70,7 +74,8 @@ header {
   background: none;
   border: none;
   cursor: pointer;
-  order: 2; /* deuxième élément */
+  order: 2;
+  /* deuxième élément */
   z-index: 3;
 }
 
@@ -85,20 +90,24 @@ header {
 }
 
 .nav {
-    order: 3; /* dernier */
-    list-style: none;
-    padding: 0;
-    margin-left: auto; /* pousse le menu complètement à droite */
+  order: 3;
+  /* dernier */
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+  /* pousse le menu complètement à droite */
 }
 
 .logo-li {
   display: block;
 }
+
 /*----------------------------------------- gros test pour voir le menu hamburger*/
 /* Styles pour le menu mobile déroulant */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* espace entre logo et menu */
+  justify-content: space-between;
+  /* espace entre logo et menu */
   align-items: center;
   padding: 0 20px;
   width: 100%;
@@ -110,7 +119,8 @@ header {
 
 .menu-toggle {
   position: absolute;
-  margin-left: auto; /* pousse le bouton complètement à droite */
+  margin-left: auto;
+  /* pousse le bouton complètement à droite */
 }
 
 .nav.open {
@@ -163,6 +173,7 @@ header {
 body.menu-open .logo-header {
   display: none;
 }
+
 .nav {
   display: none;
 }
@@ -304,14 +315,14 @@ footer {
 
 /*---------------------------------------------------------- 
 # SECTION : Héros
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 
 /*---------------------------------------------------------------- 
 # ADAPTATION PAR MEDIA QUERIES (Responsiveness) pour grands écrans
 
 Car ce qui précède les media queries est stylisé pour mobile
 en premier (mobile first).
-----------------------------------------------------------------*/ 
+----------------------------------------------------------------*/
 
 @media (min-width: 750px) {
 body {
@@ -332,58 +343,68 @@ body {
   width: 3vw;
 }
 
-@keyframes TombeRotation {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
+  #manette {
+    position: relative;
+    height: 50px;
+    display: flex;
   }
 
-  25% {
-    transform: translateY(100px) rotate(90deg);
-    opacity: 1;
+  .manettediv {
+    display: flex;
   }
 
-  50% {
-    transform: translateY(250px) rotate(180deg);
-    opacity: 0.9;
+  @keyframes TombeRotation {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+
+    25% {
+      transform: translateY(100px) rotate(90deg);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(250px) rotate(180deg);
+      opacity: 0.9;
+    }
+
+    75% {
+      transform: translateY(400px) rotate(450deg);
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: translateY(500px) rotate(720deg);
+      opacity: 0;
+    }
   }
 
-  75% {
-    transform: translateY(400px) rotate(450deg);
-    opacity: 0.6;
+  .manettediv:hover #manette {
+    animation: TombeRotation 1.5s ease-in-out;
   }
 
-  100% {
-    transform: translateY(500px) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-.manettediv:hover #manette {
-  animation: TombeRotation 1.5s ease-in-out;
-}
 
 
-
-/*---------------------------------------------------------- 
+  /*---------------------------------------------------------- 
 # SECTION : En-tête (nav, log etc)
-----------------------------------------------------------*/ 
-header {
-  background-color: black;
-  width: 100%;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+----------------------------------------------------------*/
+  header {
+    background-color: black;
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  position: relative;
-}
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+  }
 
 .nav {
 position: absolute;
@@ -398,146 +419,151 @@ flex-wrap: wrap;
 z-index: 2;
 }
 
-.nav li {
-font-family: 'bank_gothic_bold', sans-serif;
-font-size: 18px;
-}
+  .nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'bank_gothic_bold', sans-serif;
+    font-size: 18px;
+    width: 15vw;
+  }
 
-.nav a {
-text-decoration: none;
-color: white;
-padding: 10px;
-display: inline-block;
-}
+  .nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+  }
 
-.nav-gauche {
-display: flex;
-}
+  .nav-gauche {
+    display: flex;
+  }
 
-.nav-gauche {
-  display: flex;
-}
+  .nav-gauche {
+    display: flex;
+  }
 
-.logo-li {
-order: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-shrink: 0;
-}
+  .logo-li {
+    order: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
 
-.nav-droite {
-display: flex;
-}
+  .nav-droite {
+    display: flex;
+  }
 
-.nav-droite {
-  display: flex;
-}
+  .nav-droite {
+    display: flex;
+  }
 
-.logo-header {
-height: 60px;
-max-width: 800px;
-object-fit: contain;
-}
+  .logo-header {
+    height: 60px;
+    width: 100%;
+    max-width: 800px;
+    object-fit: contain;
+  }
 
-.nav li:hover {
-  background-color: var(--grisfonce);
-  border-radius: 4px;
-}
+  .nav li:hover {
+    background-color: var(--grisfonce);
+    border-radius: 4px;
+  }
 
-.menu-toggle {
-  display: none;
-}
+  .menu-toggle {
+    display: none;
+  }
 
-/*---------------------------------------------------------- 
+  /*---------------------------------------------------------- 
 # SECTION : Footer 
-----------------------------------------------------------*/ 
-footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  padding: 40px 60px;
-  display: flex;
-  justify-content: center;
-}
+----------------------------------------------------------*/
+  footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: center;
+  }
 
-.footer-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-direction: row;
-}
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+  }
 
-.footer-left {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: flex-start;
-}
+  .footer-left {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
 
-.footer-links {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px 40px;
-  font-family: 'bank_gothic_medium', sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  flex-direction: row;
-}
+  .footer-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 40px;
+    font-family: 'bank_gothic_medium', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-direction: row;
+  }
 
-.footer-links li {
-  color: white;
-}
+  .footer-links li {
+    color: white;
+  }
 
-.social-icons {
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-  width: 200px;
-  align-items: center;
-}
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+  }
 
-.youtube {
-  position: relative;
-  top: 3px;
-}
+  .youtube {
+    position: relative;
+    top: 3px;
+  }
 
-.social-icons img {
-  width: 24px;
-  height: 24px;
-}
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
 
-.footer-right {
-  display: flex;
-  align-items: center;
-}
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
 
-.footer-logo-container {
-  position: relative;
-  bottom: 70px;
-  display: flex;
-  height: 52px;
-  align-self: flex-end;
-}
+  .footer-logo-container {
+    position: relative;
+    bottom: 70px;
+    display: flex;
+    height: 52px;
+    align-self: flex-end;
+  }
 
-.footer_fin {
-  display: flex;
-  flex-direction: row;
-}
+  .footer_fin {
+    display: flex;
+    flex-direction: row;
+  }
 
-.lignes {
-  display: flex;
-  height: 2px;
-}
+  .lignes {
+    display: flex;
+    height: 2px;
+  }
 
-.ligne_design {
-  display: flex;
-  position: relative;
-  bottom: 32px;
-  height: 150px;
-}
+  .ligne_design {
+    display: flex;
+    position: relative;
+    bottom: 32px;
+    height: 150px;
+  }
 
 
 
