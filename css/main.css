@@ -325,23 +325,23 @@ en premier (mobile first).
 ----------------------------------------------------------------*/
 
 @media (min-width: 750px) {
-body {
-  margin: 0;
-  background-color: #111;
-  color: white;
-  font-family: 'bank_gothic_medium', sans-serif;
-}
+  body {
+    margin: 0;
+    background-color: #111;
+    color: white;
+    font-family: 'bank_gothic_medium', sans-serif;
+  }
 
-#manette {
-  position: relative;
-  height: 50px;
-  display: flex;
-}
+  #manette {
+    position: relative;
+    height: 50px;
+    display: flex;
+  }
 
-.manettediv {
-  position: relative;
-  width: 3vw;
-}
+  .manettediv {
+    position: relative;
+    width: 3vw;
+  }
 
   #manette {
     position: relative;
@@ -406,18 +406,18 @@ body {
     position: relative;
   }
 
-.nav {
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-list-style: none;
-padding: 0;
-margin: 0 auto;
-position: relative;
-flex-wrap: wrap;
-z-index: 2;
-}
+  .nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
 
   .nav li {
     display: flex;
