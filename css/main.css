@@ -343,16 +343,7 @@ en premier (mobile first).
     width: 3vw;
   }
 
-  #manette {
-    position: relative;
-    height: 50px;
-    display: flex;
-  }
-
-  .manettediv {
-    display: flex;
-  }
-
+/*animation de la manette qui tombe et rotate*/
   @keyframes TombeRotation {
     0% {
       transform: translateY(0) rotate(0deg);
@@ -380,6 +371,7 @@ en premier (mobile first).
     }
   }
 
+  /*activation de l'animation lors du hover de la manette*/
   .manettediv:hover #manette {
     animation: TombeRotation 1.5s ease-in-out;
   }
