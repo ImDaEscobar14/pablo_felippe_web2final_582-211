@@ -109,6 +109,7 @@ header {
 }
 
 .menu-toggle {
+  position: absolute;
   margin-left: auto; /* pousse le bouton complètement à droite */
 }
 
@@ -165,6 +166,14 @@ body.menu-open .logo-header {
 .nav {
   display: none;
 }
+
+
+
+#manette {
+  display: none;
+}
+
+
 /*----------------------------------- fin gros test pour le menu hamburger*/
 
 /*MAIN*/
@@ -279,7 +288,46 @@ body {
   font-family: 'bank_gothic_medium', sans-serif;
 }
 
+#manette {
+  position: relative;
+  height: 50px;
+  display: flex;
+}
 
+.manettediv {
+  display: flex;
+}
+
+@keyframes TombeRotation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(100px) rotate(90deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(250px) rotate(180deg);
+    opacity: 0.9;
+  }
+
+  75% {
+    transform: translateY(400px) rotate(450deg);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(500px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.manettediv:hover #manette {
+  animation: TombeRotation 1.5s ease-in-out;
+}
 
 
 

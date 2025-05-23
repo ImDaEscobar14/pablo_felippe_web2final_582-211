@@ -8,3 +8,4 @@ document.addEventListener('DOMContentLoaded', function () {
     body.classList.toggle('menu-open');
   });
 });
+
