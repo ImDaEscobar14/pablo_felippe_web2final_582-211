@@ -373,11 +373,7 @@ button {
   margin-top: 15px;
 }
 
-/*.connexion input,
-.creation-compte input {
-  width: 350px;
-  padding-left: 10px;
-}*/
+
 
 /*C'est pour faire en sorte que les boites d'input soient comme ceux dans figma*/
 .creation-compte,
@@ -405,9 +401,6 @@ input {
   height: 20px;
   margin: 0;
 }
-
-/*Juste pour la photo du code qr*/
-
 
 
 /*Pour que mon bouton connexion soit au centre*/

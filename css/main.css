@@ -69,17 +69,16 @@ header {
   width: 200px;
 }
 
-
+/*Pour le menu hambuger*/
 .menu-toggle {
   background: none;
   border: none;
   cursor: pointer;
   order: 2;
-  /* deuxième élément */
   z-index: 3;
 }
 
-/*stylisé le menu hamburger, placer les bars, changer leur tailles, couleurs, radius*/
+/*cest pour le menu hamburger*/
 .menu-toggle .bar {
   width: 40px;
   height: 7px;
@@ -102,7 +101,6 @@ header {
   display: block;
 }
 
-/*----------------------------------------- gros test pour voir le menu hamburger*/
 /* Styles pour le menu mobile déroulant */
 .nav-container {
   display: flex;
@@ -120,9 +118,9 @@ header {
 .menu-toggle {
   position: absolute;
   margin-left: auto;
-  /* pousse le bouton complètement à droite */
 }
 
+/*C'est quand on ouvre le menu hamburger et c'est pour essayer de reproduire le design qu'on a sur Figma*/
 .nav.open {
   display: flex;
   flex-direction: column;
@@ -138,10 +136,12 @@ header {
   z-index: 1000;
 }
 
+/*Pour c'est pour faire disparaitre les li quand on arrive en mobile*/
 .nav-gauche,
 .nav-droite {
   display: none;
 }
+
 
 .nav.open .nav-gauche,
 .nav.open .nav-droite {
@@ -217,8 +217,6 @@ body.menu-open .logo-header {
   animation: TombeRotation 1.5s ease-in-out;
 }
 
-
-/*----------------------------------- fin gros test pour le menu hamburger*/
 
 /*MAIN*/
 
@@ -343,7 +341,7 @@ en premier (mobile first).
     width: 3vw;
   }
 
-/*animation de la manette qui tombe et rotate*/
+  /*animation de la manette qui tombe et rotate*/
   @keyframes TombeRotation {
     0% {
       transform: translateY(0) rotate(0deg);
@@ -390,6 +388,7 @@ en premier (mobile first).
     justify-content: center;
   }
 
+  /*C'est pour mettre mes elements du header de gauche a droite (le li et les images)*/
   .nav-container {
     display: flex;
     align-items: center;
@@ -398,6 +397,7 @@ en premier (mobile first).
     position: relative;
   }
 
+  /*C'est ma barre de nav*/
   .nav {
     position: absolute;
     display: flex;
@@ -411,6 +411,7 @@ en premier (mobile first).
     z-index: 2;
   }
 
+  /*Donner le style mes elements li*/
   .nav li {
     display: flex;
     align-items: center;
@@ -426,11 +427,7 @@ en premier (mobile first).
     padding: 10px;
     display: inline-block;
   }
-
-  .nav-gauche {
-    display: flex;
-  }
-
+  /*C'est ma parti du li qui est a la gauche de l'image*/
   .nav-gauche {
     display: flex;
   }
@@ -442,15 +439,12 @@ en premier (mobile first).
     justify-content: center;
     flex-shrink: 0;
   }
-
+  /*C'est ma parti du li qui est a la droite de l'image*/
   .nav-droite {
     display: flex;
   }
 
-  .nav-droite {
-    display: flex;
-  }
-
+  /*Style pour l'image du header*/
   .logo-header {
     height: 60px;
     width: 100%;
@@ -458,6 +452,7 @@ en premier (mobile first).
     object-fit: contain;
   }
 
+  /*Le hover des li*/
   .nav li:hover {
     background-color: var(--grisfonce);
     border-radius: 4px;
